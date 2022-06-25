@@ -1,0 +1,538 @@
+:root{
+   --main-color : #bd9030;
+   --second-color : #00ce7d;
+}
+body{
+    background-color: black;
+}
+/* Mutual */
+.metalprices, .line-chart-block , .buy-sell, .accBalance{
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 5px;
+}
+
+/* //////////////////////////////////////////////// */
+
+.dashboard{
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+/* first column */
+
+/* start  title */
+.metalprices{
+    padding: 10px;
+    height: 32vh;
+}
+
+.metalprices .title{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.metalprices .title p{
+    font-size: 20px;
+}
+  
+.metalprices .title .state{
+    color: var(--second-color);
+    font-size: 15px;
+}
+.metalprices .title .state p{
+    font-size: 15px;
+}
+.metalprices .title .state p::after{
+    content: "circle";
+    border-radius: 50%;
+    margin-left: 5px;
+    font-size: 8px;
+    background-color: var(--second-color);
+}
+/* end title */
+/* start content */
+.content{
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+@media screen and (min-width: 1191px) and (max-width: 1257px) {
+    .content{
+        padding: 0px;
+    }
+}
+@media screen and (min-width: 1100px) and (max-width: 1191px) {
+    .content {
+        padding: 6px !important;
+    }
+    .gold-sections{
+        font-size: 13px!important;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width:1100px){
+    .gold-sections{
+        font-size: 11px !important;
+    }
+}
+
+.content .section1{
+    font-size: 20px;
+    color: white;
+}
+.content .gold-sections .first{
+    color: var(--second-color);
+}
+.content .gold-sections .section3 .first::before{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid var(--second-color);
+}
+.content .gold-sections  .second{
+    color: #ce0000;
+}
+.content .gold-sections .section3 .second::before{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #ce0000;
+}
+ .content .gold-sections .third, 
+ .content .gold-sections .fourth{
+    color: white;
+}
+
+.content .law{
+    color: var(--main-color);
+    font-style: italic;
+    font-size: 10px;
+    text-align: end;
+    padding: 15px;
+  
+}
+/* end content */
+/* graph */
+
+ .chart-header{
+    display: flex;
+    position: relative;
+    left: 15px;
+}
+
+.chart-header .price-chart-list select{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top: -5px;
+ 
+}
+
+.chart-header .price-chart-list option{
+    color: black;
+}
+.line-chart-block{
+    position: relative;
+    top: 30px;
+}
+.block {
+   
+    border-radius: 5px;
+    width: 100%;
+    height: 32vh;
+  
+}
+@media screen and (min-width: 1191px) and (max-width: 1259px) {
+   .block{
+    height: 30vh;
+   }
+   .line-chart-block{
+    top: 25px;
+   }
+
+
+.graph{
+    font-size: 54% !important;
+}
+.graph span{
+    width: 45px !important;
+    bottom: 20% !important;
+    left: 30%;
+    height: 0;
+    border-top: 2px solid;
+    transform-origin: left center;
+}
+.day-list select{
+    width: 23%;
+    bottom: 2px;
+}
+
+}
+@media screen and (min-width: 1100px) and (max-width: 1191px) {
+    .block{
+        height: 41vh !important;
+    }
+    .graph{
+        font-size: 100%!important;
+    }
+    .graph span{
+        bottom: 4% !important;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width:1100px){
+    .block{
+        height: 41vh !important;
+    }
+    .graph{
+        font-size: 90% !important;
+        position: relative;
+        top: 8%;
+    }
+    .graph span{
+        bottom: 15% !important;
+        
+    }
+}
+.line-chart{
+    height: 100%;
+    
+}
+.graph{
+    height: 60%;
+    position: relative;
+    color: var(--main-color);
+    font-size: 80%;
+}
+.graph ul{
+    list-style-type: none;
+    top: -10%;
+    position: relative;
+    padding-left: 0px;
+    width: 90%;
+    margin: auto;
+}
+.graph li{
+    background-color:  #0b0b0b;
+    padding-top: 5px;
+}
+.graph span{
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    height: 0;
+    border-top: 2px solid;
+    transform-origin: left center;
+}
+.day-list select
+{
+    background-color: transparent;
+    position: absolute;
+    width: 30%;
+    height: 36px;
+    height: -6%;
+    bottom: 7px;
+    left: 25px;
+    color: white;
+    border-color: var(--main-color);
+}
+.day-list option{
+    color: black;
+}
+.graph span > span {
+    left: 100%; 
+    bottom: 0;
+}
+[data-value = '912.8']
+{
+    width: 95px;
+    transform:rotate(-45deg);
+}
+[data-value = '912.6']
+{
+    width: 24px;
+    transform:rotate(65deg);
+}
+[data-value = '912.4']
+{
+    width: 39px;
+    transform:rotate(-45deg);
+}
+[data-value = '912.2']
+{
+    width: 15px;
+    transform:rotate(50deg);
+}
+[data-value = '912.0']
+{
+    width: 69px;
+    transform:rotate(-70deg);
+}
+[data-value = '911.8']
+{
+    width: 36px;
+    transform:rotate(75deg);
+}
+
+[class^='plot-'] {
+    position: absolute;
+    left: 1%;
+    bottom: 26%;
+    width: 100%;
+    padding: 2rem 1rem 0 3rem;
+    height: 80%;
+}
+.plot-y li {
+    height: 25%;
+    border-top: 1px solid #777 ;
+}
+[data-plotY]::before{
+    content: attr(data-plotY);
+    display: inline-block;
+    width: 2rem;
+    text-align: right;
+    line-height: 0;
+    position: relative;
+    left: 2.5rem;
+    color: #777;
+    top: -1.5px;
+}
+.plot-x li{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+/* ////////////////////////////////////////////////// */
+
+/* second column */
+.buy-sell .title{
+    padding: 10px;
+}
+.buy-sell .title p{
+
+    font-size: 20px;
+
+}
+.buy-sell .buy-sellbtns{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  
+}
+.buy-sell .buy-sellbtns .buy{
+    width: 40%;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-family:  Arial;
+    background-color: #464545;
+    opacity: 100%;
+    border-bottom: 5px solid var(--main-color);
+}
+
+.buy-sell .buy-sellbtns .sell{
+    width: 40%;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    opacity: 30%;
+    background-color: #464545;
+}
+
+.buy-sell .first-list select{
+    background-color: transparent;
+    color: white;
+    width: 95%;
+    margin: auto;
+    margin-top: 15px;
+}
+.buy-sell .first-list option{
+    color: black;
+}
+.buy-sell .first-label{
+    position: relative;
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+.buy-sell .first-label input{
+    background-color: transparent;
+    color: white;
+    text-align: end;
+    display: block;
+    margin-top: 20px;
+}
+
+.buy-sell .first-label span{
+    position: absolute;
+    top: 5px;
+    color: white;
+    left: 18px;
+}
+
+
+.group{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+.group .second-list{
+    width: 45%;
+}
+.group .second-list select{
+    background-color: transparent;
+    color: white;
+}
+.group .second-list option{
+    color: black;
+}
+.group .second-label{
+    position: relative;
+    width: 45%;
+    
+}
+.group .second-label input{
+    background-color: transparent;
+    text-align: end;
+}
+.group .second-label span{
+    position: absolute;
+    top: 15%;
+    left: 10px;
+    color: white;
+}
+.third-label{
+    position: relative;
+    width: 95%;
+    margin: auto;
+    
+}
+.third-label input{
+    background-color: #464545;
+    text-align: end;
+    color: white;
+    margin-top: 20px;
+}
+.third-label span{
+    position: absolute;
+    top: 15%;
+    left: 10px;
+    color: white;
+}
+.last-btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 10px;
+}
+.last-btns .reset{
+    background-color: #8f8f8f;
+    color: white;
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+}
+.last-btns .preview{
+    background-color: var(--second-color);
+    color: white;
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+}
+/* ////////////////////////////////////////////////////////// */
+
+/* third column */
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28189, 145, 47, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-dark .navbar-brand{
+    color: var(--main-color);
+    margin-left: 10px;
+    padding-top: 0px;
+}
+
+.accBalance .balancetotal{
+    height: 120px;
+    border: 1px solid white ;
+    border-radius: 5px;
+    width: 90%;
+    margin: auto; 
+    margin-top: 15px;
+    padding: 10px;
+}
+.accBalance .title{
+        font-size: 20px;
+        padding: 10px;
+}
+
+@media screen and (min-width: 1191px) and (max-width: 1259px) {
+    .balancetotal .sections{
+        font-size: 13px !important;
+    }
+}
+@media screen and (min-width: 1100px) and (max-width: 1191px) {
+    .balancetotal .sections{
+        font-size: 13px !important;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width:1100px){
+    .balancetotal .sections{
+        font-size: 11px;
+    }
+}
+.balancetotal .gold-balance{
+    color: white;
+
+}
+.balancetotal .section2{
+    color: var(--main-color);
+}
+.balancetotal .section2 .first{
+    font-weight: bold;
+}
+.balancetotal .section3{
+    color: white;
+}
+
+.multiclasses{
+    color: white;
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+   
+}
+.multiclasses .cashbalance ,
+.multiclasses .unrelized ,
+.multiclasses .funds , 
+.multiclasses .value{ 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+ 
+
+  
+}
